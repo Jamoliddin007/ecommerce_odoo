@@ -59,6 +59,3 @@ class Product(models.Model):
                 record.volume = record.length * record.height * record.width
             else:
                 record.volume = 0.0
-
-    
-

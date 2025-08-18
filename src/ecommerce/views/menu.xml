@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <menuitem id="menu_ecommerce_root" name="ECommerce"/>
+        <menuitem id="menu_categories" name="Kategoriyalar" parent="menu_ecommerce_root" action="action_categories"/>
+        <menuitem id="menu_products" name="Mahsulotlar" parent="menu_ecommerce_root" action="action_products"/>
+    </data>
+</odoo>

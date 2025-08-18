@@ -12,4 +12,3 @@ class Category(models.Model):
     def _compute_product_count(self):
         for record in self:
             record.product_count = len(record.product_ids)
-

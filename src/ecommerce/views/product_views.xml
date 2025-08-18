@@ -1,0 +1,65 @@
+<odoo>
+  <data>
+    <!-- Product List View -->
+    <record id="view_product_list" model="ir.ui.view">
+      <field name="name">product.list</field>
+      <field name="model">ecommerce.product</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="slug"/>
+          <field name="category_id"/>
+          <field name="sale_price"/>
+          <field name="cost_price"/>
+          <field name="profit_percent"/>
+          <field name="volume"/>
+        </list>
+      </field>
+    </record>
+
+    <!-- Product Form View -->
+    <record id="view_product_form" model="ir.ui.view">
+      <field name="name">product.form</field>
+      <field name="model">ecommerce.product</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="slug" readonly="1"/>
+              <field name="category_id"/>
+              <field name="has_category" readonly="1"/>
+            </group>
+            <group>
+              <field name="sale_price"/>
+              <field name="cost_price"/>
+              <field name="profit_percent" readonly="1"/>
+            </group>
+            <notebook>
+              <page string="O‘lchamlari">
+                <group>
+                  <field name="length"/>
+                  <field name="width"/>
+                  <field name="height"/>
+                  <field name="volume" readonly="1"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Product Action -->
+    <record id="action_products" model="ir.actions.act_window">
+      <field name="name">Mahsulotlar</field>
+      <field name="res_model">ecommerce.product</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Product Menu -->
+    <menuitem id="menu_products" name="Mahsulotlar"
+              parent="menu_ecommerce_root"
+              action="action_products"/>
+  </data>
+</odoo>
