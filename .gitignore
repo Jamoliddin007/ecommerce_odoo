@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+*.eggs/
+*.manifest
+*.spec
+
+# Virtual environment
+venv/
+.env/
+.env*/
+.venv*/
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs & cache
+*.log
+*.pot
+*.mo
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.bak
+*.tmp
+*.orig
+*.DS_Store
+Thumbs.db
+
+# Odoo specific
+*.zip
+*.tgz
+*.tar.gz
+*.retry
+*.session
+*.dat
+*.dbf
+*.log.db
+*.log.sql
+*.pid
+
+# Odoo generated files
+.odoo_session
+.odoo-server.log
+addons/  # agar sen faqat local modul ishlatayotgan bo'lsang, umumiy addons papkasini exclude qilma!
+
+# System / Misc
+*.so
+*.dll
+*.dylib
+*.class
+*.jar
+*.war
+*.iml
+*.ipr
+*.iws
