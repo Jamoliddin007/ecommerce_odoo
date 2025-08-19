@@ -1,3 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_category,ecommerce.category,model_ecommerce_category,,1,1,1,1
 access_product,ecommerce.product,model_ecommerce_product,,1,1,1,1
+access_customer,ecommerce.customer,model_ecommerce_customer,,1,1,1,1
+access_order,ecommerce.order,model_ecommerce_order,,1,1,1,1
+access_order_line,ecommerce.order.line,model_ecommerce_order_line,,1,1,1,1
