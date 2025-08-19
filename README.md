@@ -26,27 +26,6 @@ Includes full support for products, categories, customers, orders, and access co
 - Intuitive XML forms, tree, and menu items  
 - Easy navigation for end-users  
 
----
-
-## 📂 Project Structure  
-
-ecommerce_odoo/
-├── conf/
-│ └── odoo.conf # Odoo configuration file
-└── src/
-└── ecommerce/
-├── manifest.py # Module manifest
-├── models/ # Business logic
-│ ├── customer.py
-│ ├── order.py
-│ ├── order_line.py
-│ └── category.py
-├── views/ # XML views
-├── data/ # Initial data (sequences)
-└── security/ # Access control rules
-
-
----
 
 ## ⚙️ Installation  
 
