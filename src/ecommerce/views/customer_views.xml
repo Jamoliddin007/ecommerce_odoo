@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+        <record id="view_customer_list" model="ir.ui.view">
+            <field name="name">ecommerce.customer.list</field>
+            <field name="model">ecommerce.customer</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="full_name"/>
+                    <field name="email"/>
+                    <field name="country"/>
+                    <field name="order_count"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_customer_form" model="ir.ui.view">
+            <field name="name">ecommerce.customer.form</field>
+            <field name="model">ecommerce.customer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="first_name"/>
+                            <field name="last_name"/>
+                            <field name="middle_name"/>
+                            <field name="full_name" readonly="1"/>
+                            <field name="initials" readonly="1"/>
+                            <field name="age_text" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="email"/>
+                            <field name="email_domain" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="country"/>
+                            <field name="region"/>
+                            <field name="district"/>
+                            <field name="street"/>
+                            <field name="full_address" readonly="1"/>
+                        </group>
+                        <notebook>
+                            <page string="Buyurtmalari">
+                                <field name="orders">
+                                    <list>
+                                        <field name="deadline"/>
+                                        <field name="days_left"/>
+                                        <field name="product_count"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_customers" model="ir.actions.act_window">
+            <field name="name">Mijozlar</field>
+            <field name="res_model">ecommerce.customer</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

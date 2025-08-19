@@ -1,7 +1,20 @@
 <odoo>
-    <data>
-        <menuitem id="menu_ecommerce_root" name="ECommerce"/>
-        <menuitem id="menu_categories" name="Kategoriyalar" parent="menu_ecommerce_root" action="action_categories"/>
-        <menuitem id="menu_products" name="Mahsulotlar" parent="menu_ecommerce_root" action="action_products"/>
-    </data>
+  <data>
+    <menuitem id="menu_ecommerce_root" name="ECommerce"/>
+
+    <menuitem id="menu_categories" name="Kategoriyalar"
+              parent="menu_ecommerce_root" action="action_categories"/>
+
+    <menuitem id="menu_products" name="Mahsulotlar"
+              parent="menu_ecommerce_root" action="action_products"/>
+
+    <menuitem id="menu_customers" name="Mijozlar"
+              parent="menu_ecommerce_root" action="action_customers"/>
+
+    <menuitem id="menu_orders" name="Buyurtmalar"
+              parent="menu_ecommerce_root" action="action_orders"/>
+
+    <menuitem id="menu_order_lines" name="Buyurtma qatorlari"
+              parent="menu_ecommerce_root" action="action_ecommerce_order_line"/>
+  </data>
 </odoo>
