@@ -58,11 +58,11 @@ class Order(models.Model):
         return result
 
     # Sequence orqali name yaratish
-    @api.model
-    def create(self, vals):
-        if vals.get("name", "Yangi") == "Yangi":
-            vals["name"] = self.env["ir.sequence"].next_by_code("ecommerce.order") or "Yangi"
-        return super().create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+        if vals_list.get("name", "Yangi") == "Yangi":
+            vals_list["name"] = self.env["ir.sequence"].next_by_code("ecommerce.order") or "Yangi"
+        return super().create(vals_list)
 
     # Qolgan kunlarni hisoblash
     @api.depends("deadline")

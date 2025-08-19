@@ -25,6 +25,7 @@
                             <field name="middle_name"/>
                             <field name="full_name" readonly="1"/>
                             <field name="initials" readonly="1"/>
+                            <field name="birth_date" />
                             <field name="age_text" readonly="1"/>
                         </group>
                         <group>

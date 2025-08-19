@@ -78,7 +78,7 @@ class Customer(models.Model):
                 years = delta.days // 365
                 months = (delta.days % 365) // 30
                 days = (delta.days % 365) % 30
-                record.age_text = f"{years}yil {months}oy {days}kun"
+                record.age_text = f"{years} yil {months} oy {days} kun"
             else:
                 record.age_text = False
 
